@@ -9,8 +9,10 @@ module Yell
         @port = opts[:port] || 514
         @facility = opts[:facility] || $0
         @prefix = opts[:prefix] || ''
+        @mapping = opts[:mapping] || :logger
 
         @instance = SyslogSD::Logger.new @host, @port
+        @instance.level_mapping = @mapping
       end
       
       def yank_hashes_from *messages
