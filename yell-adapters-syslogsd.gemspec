@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "yell-adapters-syslogsd"
-  spec.version       = 1 # Yell::Adapters::Syslogsd::VERSION
+  spec.version       = '1.0.0' # Yell::Adapters::Syslogsd::VERSION
   spec.authors       = ["Raymond F. Wells"]
   spec.email         = ["rfw2nd@gmail.com"]
   spec.summary       = %q{Connect SyslogSD to Yell}
