@@ -5,11 +5,11 @@ module Yell
       attr_accessor :host, :port, :facility, :prefix
       
       setup do |opts|
-        @host = opts[:host] || 'localhost'
-        @port = opts[:port] || 514
-        @facility = opts[:facility] || $0
-        @prefix = opts[:prefix] || ''
-        @mapping = opts[:mapping] || :logger
+        @host = Yell.__fetch__(opts, :host, :default => 'localhost')
+        @port = Yell.__fetch__(opts, :port, :default => 514)
+        @facility = Yell.__fetch__(opts, :facility, :default => $0)
+        @prefix = Yell.__fetch__(opts, :prefix, :default => '')
+        @mapping = Yell.__fetch__(opts, :mapping, :default => :logger)
 
         @instance = SyslogSD::Logger.new @host, @port
         @instance.level_mapping = @mapping
