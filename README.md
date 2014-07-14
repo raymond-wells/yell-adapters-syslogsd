@@ -1,5 +1,7 @@
 # Yell::Adapters::Syslogsd
 
+[![Gem Version](https://badge.fury.io/rb/yell-adapters-syslogsd.svg)](http://badge.fury.io/rb/yell-adapters-syslogsd)
+
 TODO: Write a gem description
 
 ## Installation
